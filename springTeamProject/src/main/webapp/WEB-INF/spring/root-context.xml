@@ -12,29 +12,29 @@
 
 	<!-- Root Context: defines shared resources visible to all other web components -->
 
-<!-- <bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
-      <property name="connectionTimeout" value="3000"/>
-      <property name="maximumPoolSize" value="300" /> 
-      <property name="minimumIdle" value="20" />
-      <property name="driverClassName"
-         value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy" />
-      <property name="jdbcUrl" value="jdbc:log4jdbc:oracle:thin:@localhost:1521/xepdb1" />
-      <property name="username" value="JIS" />
-      <property name="password" value="357641" />
-   </bean>   -->
+	<!-- 개인DB	--> 
+   	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig" >
+		<property value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"
+			name="driverClassName" />
+		<property
+			value="jdbc:log4jdbc:oracle:thin:@localhost:1521/xepdb1"
+			name="jdbcUrl" />
+		<property value="BM" name="username" />
+		<property value="bm0301" name="password" />
+	</bean> 
  	
- 	<!-- 팀 DB  -->
-<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+ 	<!-- 팀 DB  
+	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
       <property name="connectionTimeout" value="3000"/>
       <property name="maximumPoolSize" value="300" /> 
       <property name="minimumIdle" value="20" />
       <property name="driverClassName"
          value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy" />
-      <property name="jdbcUrl" value="jdbc:log4jdbc:oracle:thin:@TeamDB_low?TNS_ADMIN=/ora/Wallet_TeamDB" />
+	  <property name="jdbcUrl" value="jdbc:log4jdbc:oracle:thin:@TeamDB_low?TNS_ADMIN=/ora/Wallet_TeamDB" />
       <property name="username" value="admin" />
       <property name="password" value="soldesk01TEAM" />
    </bean>
-
+-->
 
 
 	<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource"
